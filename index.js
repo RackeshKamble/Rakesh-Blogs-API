@@ -65,7 +65,8 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 //     res.sendFile(path.join(__dirname, './client/build/index.html'));
 // })
 app.get('/' ,(req,res) => {
-    res.setHeader('Access-Control-Allow-Credentials' , 'true');
+    //res.setHeader('Access-Control-Allow-Credentials' , 'true');
+    res.header('Access-Control-Allow-Origin', '*');
     res.send("API is running");
 });
 //Connect mongoose

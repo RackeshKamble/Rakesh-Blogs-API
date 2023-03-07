@@ -66,6 +66,8 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 // })
 app.get('/' ,(req,res) => {
     res.setHeader('Access-Control-Allow-Credentials' , 'true');
+    res.setHeader('Access-Control-Allow-Origin' , 'true');
+    res.setHeader('Access-Control-Allow-Headers' , 'true');
     res.send("API is running");
 })
 

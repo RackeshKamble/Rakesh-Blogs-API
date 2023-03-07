@@ -43,7 +43,8 @@ const secret = 'qwertyuiop';
 
 //app.use(express.static(path.join(__dirname , './client/build')));
 
-app.use(cors({origin:'http://localhost:3000' , credentials:true}))
+// app.use(cors({origin:'http://localhost:3000' , credentials:true}))
+app.use(cors({origin:'https://rakesh-blogs.onrender.com' , credentials:true}))
 /*
  app.use((_req, res) => {
      res.header('Access-Control-Allow-Origin', '*');

@@ -65,10 +65,10 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 //     res.sendFile(path.join(__dirname, './client/build/index.html'));
 // })
 app.get('/' ,(req,res) => {
-    //res.setHeader('Access-Control-Allow-Credentials' , 'true');
-    res.header('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials' , 'true');
     res.send("API is running");
-});
+})
+
 //Connect mongoose
 //mongoose.connect('mongodb+srv://rackeshkamble:Co10O4i3fJrwPU8n@cluster0.egsr5zu.mongodb.net/?retryWrites=true&w=majority');
 //mongoose.connect('mongodb+srv://RakeshKamble:Mhasoba_10@rakesh-kamble-blogs.ygkq5sg.mongodb.net/?retryWrites=true&w=majority')
@@ -112,7 +112,7 @@ app.post('/login' , async (req, res)=>{
                 username, 
                 id : userDoc._id
             },
-            secret , 
+            'qwertyuiop', 
             {},
             (err ,token) => {
                 // Throw error
